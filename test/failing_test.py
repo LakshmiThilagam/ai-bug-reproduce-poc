@@ -4,9 +4,9 @@ def test_addition():
 
 def test_string_length():
     word = "hello"
-    assert len(word) == 5, f"Expected length 10, got {len(word)}"
+    assert len(word) == 7, f"Expected length 10, got {len(word)}"
 
 
 def test_list_contains():
     items = [1, 2, 3]
-    assert 3 in items, "Expected 3 to be in the list"
+    assert 4 in items, "Expected 3 to be in the list"
