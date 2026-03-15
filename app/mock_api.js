@@ -1,25 +1,11 @@
-const DELAYS = [1000, 2000, 4000];
+function getUser() {
+    const delay = Math.random() * 5000;
 
-function fetchData() {
-  const delay = DELAYS[Math.floor(Math.random() * DELAYS.length)];
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve({ status: "ok", data: "payload", responseTime: delay });
-    }, delay);
-  });
-}
-
-function fetchDataWithTimeout(timeoutMs = 3000) {
-  return new Promise((resolve, reject) => {
-    const timer = setTimeout(() => {
-      reject(new Error(`API call timed out after ${timeoutMs}ms`));
-    }, timeoutMs);
-
-    fetchData().then((result) => {
-      clearTimeout(timer);
-      resolve(result);
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve({name: "Test User"});
+        }, delay);
     });
-  });
 }
 
-module.exports = { fetchData, fetchDataWithTimeout, DELAYS };
+module.exports = { getUser };
