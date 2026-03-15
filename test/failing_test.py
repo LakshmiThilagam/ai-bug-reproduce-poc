@@ -1,5 +1,5 @@
 def test_addition():
-    assert 1 + 1 == 2, "Expected 1 + 1 to equal 2"
+    assert 1 + 1 == 3, "Expected 1 + 1 to equal 2"
 
 
 def test_string_length():
