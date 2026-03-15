@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Devices</h2>
+
+<table id="devices">
+</table>
+
+<script>
+setTimeout(() => {
+    const devices = ["Device A", "Device B", "Device C"];
+
+    const table = document.getElementById("devices");
+
+    devices.forEach(d => {
+        const row = document.createElement("tr");
+        row.innerHTML = "<td>" + d + "</td>";
+        table.appendChild(row);
+    });
+}, Math.random() * 4000);
+</script>
+
+</body>
+</html>

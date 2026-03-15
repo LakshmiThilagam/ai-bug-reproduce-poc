@@ -1,0 +1,13 @@
+{
+  "name": "ai-bug-reproduce-poc",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node app/server.js",
+    "test:flaky": "node test/flaky_test.js",
+    "test:playwright": "npx playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.50.0"
+  }
+}
